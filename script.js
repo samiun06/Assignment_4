@@ -36,3 +36,11 @@ function getInputValue(id) {
     const inputNumber = parseInt(input.value);
     return inputNumber;
 }
+
+// For showing something after clicking book now button.
+
+document.getElementById("booking-btn").addEventListener("click", function(){
+    document.getElementById("before-booking").style.display = "none";
+    const afterBooking = document.getElementById("after-booking")
+    afterBooking.style.display = "block";
+})

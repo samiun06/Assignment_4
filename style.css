@@ -88,6 +88,13 @@ nav ul li a:hover, a.active{
     border-radius: 4px;
     margin: 10px 0;
 }
+
+#after-booking{
+    display: none;
+    padding: 200px 80px;
+    text-align: center;
+
+}
 .f-class{
     display: flex;
     justify-content: space-between;
