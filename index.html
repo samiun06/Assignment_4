@@ -43,84 +43,94 @@
                 <h1>Congratulations!🥳 You have booked in Cruise Queen</h1>
             </div>
             <div id="before-booking">
-            <h3>Book Ocean Time</h3> <span id="ticket-requirement" style="display: none; color:red">(Please Buy ticket)</span>
-            <div class="input-group">
-                <label for="">Flying From</label> <span id="required-flyFrom" style="display: none; color:red">(Please Fill the form)</span>
-                <input id="fly-from" class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh" value="">
-            </div>
-            <div class="input-group">
-                <label for="">Flying To</label> <span id="required-flyTo" style="display: none; color:red">(Please Fill the form)</span>
-                <input id="fly-to" class="inp-style" type="text" name="" placeholder="New York, United States" value="">
-            </div>
-            <div class="inputs">
+                <h3>Book Ocean Time</h3> <span id="ticket-requirement" style="display: none; color:red">(Please Buy
+                    ticket)</span>
                 <div class="input-group">
-                    <label" for="">Departure</label> <span id="required-departure" style="display: none; color:red">(Fill the date)</span>
-                        <input id="departure" class="inp-style" type="date" name="" value="">
+                    <label for="">Flying From</label> <span id="required-flyFrom"
+                        style="display: none; color:red">(Please Fill the form)</span>
+                    <input id="fly-from" class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh" value="">
                 </div>
                 <div class="input-group">
-                    <label for="">Return</label> <span id="required-return" style="display: none; color:red">(Fill the date)</span>
-                    <input id="return" class="inp-style" type="date" name="" value="">
+                    <label for="">Flying To</label> <span id="required-flyTo" style="display: none; color:red">(Please
+                        Fill the form)</span>
+                    <input id="fly-to" class="inp-style" type="text" name="" placeholder="New York, United States"
+                        value="">
                 </div>
-            </div>
-            <div class="input-group f-class">
-                <div>
-                    <label for="">First Class ($150)</label>
-                    <input id="first-class" class="inp-style inp-width" type="number" name="" value="0">
-                </div>
-                <div class="plus-minus-btn">
-                    <button  onclick="handleTicket(true, 'first-class')" class="btn btn-default button"><i class="fas fa-plus"></i></button>
-                    <button  onclick="handleTicket(false, 'first-class');" class="btn btn-default button"><i class="fas fa-minus"></i></button>
-                </div>
-            </div>
-
-            <div class="input-group f-class">
-                <div>
-                    <label for="">Economy ($100)</label>
-                    <input id="economy-class" class="inp-style inp-width" type="number" name="" value="0">
-                </div>
-                <div class="plus-minus-btn">
-                    <button  onclick="handleTicket(true, 'economy-class');" class="btn btn-default button"><i class="fas fa-plus"></i></button>
-                    <button  onclick="handleTicket(false, 'economy-class');" class="btn btn-default button"><i class="fas fa-minus"></i></button>
-                </div>
-            </div>
-            <div class="calculations">
-                <div class="amount">
-                    <div class="left">
-                        <p>Subtotal</p>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label" for="">Departure</label> <span id="required-departure"
+                                style="display: none; color:red">(Fill the date)</span>
+                            <input id="departure" class="inp-style" type="date" name="" value="">
                     </div>
-                    <div class="right">
-                        <p>$<span id="subtotal">00</span></p>
+                    <div class="input-group">
+                        <label for="">Return</label> <span id="required-return" style="display: none; color:red">(Fill
+                            the date)</span>
+                        <input id="return" class="inp-style" type="date" name="" value="">
+                    </div>
+                </div>
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">First Class ($150)</label>
+                        <input id="first-class" class="inp-style inp-width" type="number" name="" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <button onclick="handleTicket(true, 'first-class')" class="btn btn-default button"><i
+                                class="fas fa-plus"></i></button>
+                        <button onclick="handleTicket(false, 'first-class');" class="btn btn-default button"><i
+                                class="fas fa-minus"></i></button>
                     </div>
                 </div>
 
-                <div class="amount">
-                    <div class="left">
-                        <p>Charge 10% VAT</p>
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">Economy ($100)</label>
+                        <input id="economy-class" class="inp-style inp-width" type="number" name="" value="0">
                     </div>
-                    <div class="right">
-                        <p>$<span id="vat">00</span></p>
-                    </div>
-                </div>
-                <hr>
-                <div class="amount">
-                    <div class="left">
-                        <h4>Total</h4>
-                    </div>
-                    <div class="right">
-                        <p>$<span id="grand-total">00</span></p>
+                    <div class="plus-minus-btn">
+                        <button onclick="handleTicket(true, 'economy-class');" class="btn btn-default button"><i
+                                class="fas fa-plus"></i></button>
+                        <button onclick="handleTicket(false, 'economy-class');" class="btn btn-default button"><i
+                                class="fas fa-minus"></i></button>
                     </div>
                 </div>
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p>$<span id="subtotal">00</span></p>
+                        </div>
+                    </div>
+
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% VAT</p>
+                        </div>
+                        <div class="right">
+                            <p>$<span id="vat">00</span></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p>$<span id="grand-total">00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <button id="booking-btn" class="btn-style">Book Now</button>
             </div>
-            <button id="booking-btn" class="btn-style">Book Now</button>
         </div>
-    </div>
 
         <script src="script.js"></script>
     </main>
 
     <!--Thank You-->
 
-    
+
 </body>
 
 </html>

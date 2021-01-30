@@ -14,7 +14,7 @@ function handleTicket(isIncrease, id) {
 }
 
 // Calculation function which will calculate subtotal, vat and total.
- 
+
 function calculation() {
     const firstClass = getInputValue("first-class");
     const economyClass = getInputValue("economy-class");
@@ -39,30 +39,26 @@ function getInputValue(id) {
 
 // For showing something after clicking book now button and making the Flying from and Flying to required and cheking if any ticket is bought.
 
-document.getElementById("booking-btn").addEventListener("click", function(){
+document.getElementById("booking-btn").addEventListener("click", function () {
     const flyFrom = document.getElementById("fly-from").value;
     const flyTo = document.getElementById("fly-to").value;
     const departure = document.getElementById("departure").value;
     const returnFrom = document.getElementById("return").value;
     const firstClassValue = getInputValue("first-class");
     const economyClassValue = getInputValue("economy-class");
-    if(flyFrom == ""){
+    if (flyFrom == "") {
         document.getElementById("required-flyFrom").style.display = "inline";
-    }
-    else if(flyTo == ""){
+    } else if (flyTo == "") {
         document.getElementById("required-flyTo").style.display = "inline";
-    }
-    else if(departure == ""){
+    } else if (departure == "") {
         document.getElementById("required-departure").style.display = "inline";
-    }
-    else if(returnFrom == ""){
+    } else if (returnFrom == "") {
         document.getElementById("required-return").style.display = "inline";
-    }
-    else if(firstClassValue == 0 && economyClassValue == 0){
+    } else if (firstClassValue == 0 && economyClassValue == 0) {
         document.getElementById("ticket-requirement").style.display = "inline";
+    } else {
+        document.getElementById("before-booking").style.display = "none";
+        const afterBooking = document.getElementById("after-booking")
+        afterBooking.style.display = "block";
     }
-    else{
-    document.getElementById("before-booking").style.display = "none";
-    const afterBooking = document.getElementById("after-booking")
-    afterBooking.style.display = "block";
-}})
+})
