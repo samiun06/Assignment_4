@@ -20,10 +20,10 @@ function calculation() {
     const economyClass = getInputValue("economy-class");
     const totalPrice = (firstClass * 150) + (economyClass * 100);
 
-    document.getElementById('subtotal').innerText = '$' + totalPrice;
+    document.getElementById('subtotal').innerText = totalPrice;
 
     const vat = Math.round(totalPrice * 0.1);
-    document.getElementById("vat").innerText = "$" + vat;
+    document.getElementById("vat").innerText = vat;
 
     const grandTotal = totalPrice + vat;
     document.getElementById("grand-total").innerText = grandTotal;
