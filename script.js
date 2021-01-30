@@ -37,10 +37,27 @@ function getInputValue(id) {
     return inputNumber;
 }
 
-// For showing something after clicking book now button.
+// For showing something after clicking book now button and making the Flying from and Flying to required.
 
 document.getElementById("booking-btn").addEventListener("click", function(){
+    const flyFrom = document.getElementById("fly-from").value;
+    const flyTo = document.getElementById("fly-to").value;
+    const departure = document.getElementById("departure").value;
+    const returnFrom = document.getElementById("return").value;
+    if(flyFrom == ""){
+        document.getElementById("required1").style.display = "inline";
+    }
+    else if(flyTo == ""){
+        document.getElementById("required2").style.display = "inline";
+    }
+    else if(departure == ""){
+        document.getElementById("required3").style.display = "block";
+    }
+    else if(returnFrom == ""){
+        document.getElementById("required4").style.display = "block";
+    }
+    else{
     document.getElementById("before-booking").style.display = "none";
     const afterBooking = document.getElementById("after-booking")
     afterBooking.style.display = "block";
-})
+}})
