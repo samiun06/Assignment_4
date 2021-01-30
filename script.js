@@ -53,10 +53,10 @@ document.getElementById("booking-btn").addEventListener("click", function(){
         document.getElementById("required-flyTo").style.display = "inline";
     }
     else if(departure == ""){
-        document.getElementById("required-departure").style.display = "block";
+        document.getElementById("required-departure").style.display = "inline";
     }
     else if(returnFrom == ""){
-        document.getElementById("required-return").style.display = "block";
+        document.getElementById("required-return").style.display = "inline";
     }
     else if(firstClassValue == 0 && economyClassValue == 0){
         document.getElementById("ticket-requirement").style.display = "inline";
