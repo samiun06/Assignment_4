@@ -131,7 +131,11 @@ nav ul li a:hover, a.active{
     color: slateblue;
     font-size: 17px;
     background: none;
-    
+    padding: 10px;
+    cursor: pointer;
+}
+.button:focus{
+    outline: none;
 }
 
 .amount{
